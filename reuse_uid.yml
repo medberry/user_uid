@@ -1,0 +1,10 @@
+---
+- name: Try to reuse uid 1040 for ANOTHER user other than John Doe
+  hosts: all
+  become: yes
+
+  - name: Add the user 'johnd' with a specific uid and a primary group of 'admin'
+    user:
+      name: richardr
+      comment: Richard Roe
+      uid: 1040
