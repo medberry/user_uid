@@ -1,0 +1,12 @@
+---
+- name: Simple shell script for UIDs
+  hosts: all
+  
+  tasks:
+  - name: grab the uids, sort, and last few
+    shell: "cut -d: -f3 /etc/passwd |sort -gu |tail -n5"
+    register: uid_result
+
+  - name: Print out results
+    debug:
+      var: uid_result.stdout_lines
