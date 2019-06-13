@@ -6,7 +6,7 @@
   # need to be root to add users.
 
   tasks:
-  - name: Add the user 'johnd' with a specific uid and a primary group of 'admin'
+  - name: Add the user 'johnd' with a specific uid 
     user:
       name: johnd
       comment: John Doe
