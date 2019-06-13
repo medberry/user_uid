@@ -5,9 +5,9 @@
   become: yes
   # need to be root to add users.
 
-- name: Add the user 'johnd' with a specific uid and a primary group of 'admin'
-  user:
-    name: johnd
-    state: absent
-    remove: yes
-    
+  tasks:
+    - name: Add the user 'johnd' with a specific uid and a primary group of 'admin'
+      user:
+        name: johnd
+        state: absent
+        remove: yes
