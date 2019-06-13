@@ -1,0 +1,12 @@
+---
+- name: Simple Play to add John Doe at a specific uid
+  hosts: all
+  # you want to send this playbook unix style hosts
+  become: yes
+  # need to be root to add users.
+
+- name: Add the user 'johnd' with a specific uid and a primary group of 'admin'
+  user:
+    name: johnd
+    comment: John Doe
+    uid: 1040
